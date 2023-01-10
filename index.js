@@ -51,17 +51,33 @@ client.on('messageCreate', message => {
 
     const messageContent = message.content.toLowerCase();
 
+    // picks number between 0-5
+    let rollDice = Math.floor(Math.random() * 6);
     //  ignore bot messages
     if (message.author.bot) return;
 
     // say bad to word
     if (nounWords.some(word => messageContent.includes(word)) && badWords.some(word => messageContent.includes(word))) {
-        message.channel.send('Shaddap');
+        const replyMessage = ['Shaddap',
+            'nigger',
+            'fuck yourself 🫵',
+            'shadap nigger',
+            'china sucks',
+            '🤬🖕'
+        ];
+        message.channel.send(replyMessage[rollDice]);
     }
 
     // say good to word
     if (nounWords.some(word => messageContent.includes(word)) && goodWords.some(word => messageContent.includes(word))) {
-        message.channel.send('Thank Capitalist');
+        const replyMessage = ['Thank Capitalist',
+            'I know right 👌',
+            'Bless Capitalist',
+            '😎👉👉',
+            '💯💯💯',
+            'Godspeed'
+        ];
+        message.channel.send(replyMessage[rollDice]);
     }
 
     // console.log(message.author);
