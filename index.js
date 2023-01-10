@@ -43,7 +43,8 @@ client.on('messageCreate', message => {
         'dicks',
         'tiananmen',
         'pussy',
-        'fuck'
+        'fuck',
+        'fucking'
     ];
 
     const messageContent = message.content.toLowerCase();
