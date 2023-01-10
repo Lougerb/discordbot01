@@ -28,7 +28,9 @@ client.on('messageCreate', message => {
         'zedong',
         'hong',
         'kong',
-        'taiwan'
+        'taiwan',
+        'pooh',
+        'winnie'
     ];
     const goodWords = ['good',
         'best',
